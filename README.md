@@ -4,4 +4,4 @@
 ***
 # Exercise List
 *Here you can find problem solutions for the following exercises:*
-1. [**ORM Fundamentals - Building own MiniORM**](https://github.com/KrIsKa7a/CSharp_Db_Feb_2025/tree/main/)
+1. [**ORM Fundamentals - Building own MiniORM**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E01_MiniORM)
