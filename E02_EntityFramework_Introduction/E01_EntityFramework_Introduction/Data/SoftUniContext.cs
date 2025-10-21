@@ -32,8 +32,14 @@
         public virtual DbSet<Town> Towns { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder
-                .UseSqlServer("Server=DESKTOP-H3STVF4\\SQLEXPRESS;Database=SoftUni;Integrated Security=True;Encrypt=False;");
+		{
+			if (!optionsBuilder.IsConfigured)
+			{
+				optionsBuilder
+					.UseSqlServer(
+						"Server=DESKTOP-H3STVF4\\SQLEXPRESS;Database=SoftUni;Integrated Security=True;Encrypt=False;");
+			}
+		}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
