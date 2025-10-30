@@ -7,3 +7,5 @@
 1. [**ORM Fundamentals - Building own MiniORM**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E01_MiniORM)
 2. [**Entity Framework Introduction**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E02_EntityFramework_Introduction)
 3. [**Entity Relations**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E03_Entity_Relations)
+4. [**LINQ**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E04_LINQ)
+5. [**Advanced Querying**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E05_AdvancedQuerying)
