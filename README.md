@@ -9,3 +9,4 @@
 3. [**Entity Relations**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E03_Entity_Relations)
 4. [**LINQ**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E04_LINQ)
 5. [**Advanced Querying**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E05_AdvancedQuerying)
+6. [**Migrations**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E06_Migrations)
