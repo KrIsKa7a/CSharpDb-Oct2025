@@ -10,4 +10,5 @@
 4. [**LINQ**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E04_LINQ)
 5. [**Advanced Querying**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E05_AdvancedQuerying)
 6. [**Migrations**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E06_Migrations)
-7. [**JSON Processing**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E07_JSON_Processing/CarDealer)
+7. [**JSON Processing**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E07_JSON_Processing)
+8. [**XML Processing**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E08_XML_Processing)
