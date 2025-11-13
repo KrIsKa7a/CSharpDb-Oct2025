@@ -1,0 +1,63 @@
+﻿@model MovieDetailsViewModel
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4 p-4"
+         style="background-color: #2c2c2c; color: #f1f1f1;">
+
+        <div class="d-flex gap-4">
+            <img src="@Model.ImageUrl"
+                 alt="@Model.Title"
+                 class="rounded"
+                 style="width: 260px; height: 380px; object-fit: cover; border: 2px solid #444;">
+
+            <div class="flex-grow-1">
+                <h2 class="fw-bold text-warning mb-3">@Model.Title</h2>
+
+                <p>
+                    <strong class="text-light">Genre:</strong>
+                    <span class="text-muted">@Model.Genre</span>
+                </p>
+
+                <p>
+                    <strong class="text-light">Director:</strong>
+                    <span class="text-muted">@Model.Director</span>
+                </p>
+
+                <p>
+                    <strong class="text-light">Duration:</strong>
+                    <span class="text-muted">@Model.Duration min</span>
+                </p>
+
+                <p>
+                    <strong class="text-light">Release Date:</strong>
+                    <span class="text-muted">@Model.ReleaseDate.ToShortDateString()</span>
+                </p>
+
+                <hr class="border-secondary">
+
+                <p class="text-muted" style="line-height: 1.6;">
+                    @Model.Description
+                </p>
+
+                <div class="mt-4 d-flex gap-3">
+                    <a asp-action="Index" class="btn btn-outline-light">
+                        <i class="bi bi-arrow-left"></i> Back to Movies
+                    </a>
+
+                    <a asp-action="Delete"
+                       asp-route-id="@Model.Id"
+                       class="btn btn-danger">
+                        <i class="bi bi-trash"></i> Delete Movie
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

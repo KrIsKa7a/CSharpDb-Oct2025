@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MoviesLibrary>
+	<GenreGroup name="Romance">
+		<Movie id="ab2c3213-48a7-41ea-9393-45c60ef813e6" duration="195">
+			<Title>Titanic</Title>
+			<Details>
+				<Genre>Romance</Genre>
+				<Director>James Cameron</Director>
+				<Release date="1997-12-19" />
+			</Details>
+			<Description>
+A love story unfolds on the doomed voyage of the Titanic.
+			</Description>
+			<Media>
+				<ImageUrl>https://m.media-amazon.com/images/M/MV5BYzYyN2FiZmUtYWYzMy00MzViLWJkZTMtOGY1ZjgzNWMwN2YxXkEyXkFqcGc@._V1_.jpg</ImageUrl>
+			</Media>
+			<Rating source="IMDb">7.9</Rating>
+		</Movie>
+	</GenreGroup>
+
+	<GenreGroup name="Sci-Fi">
+		<Movie id="844d9abd-104d-41ab-b14a-ce059779ad91" duration="136">
+			<Title>The Matrix</Title>
+			<Details>
+				<Genre>Sci-Fi</Genre>
+				<Director>Lana Wachowski, Lilly Wachowski</Director>
+				<Release date="1999-03-31" />
+			</Details>
+			<Description>
+A computer hacker learns about the true nature of his reality and his role in the war against its controllers.
+			</Description>
+			<Media>
+				<ImageUrl>https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg</ImageUrl>
+			</Media>
+			<Rating source="IMDb">8.7</Rating>
+		</Movie>
+	</GenreGroup>
+
+	<GenreGroup name="Drama">
+		<Movie id="54082f99-023b-4d68-89ac-44c00a0958d0" duration="142">
+			<Title>Forrest Gump</Title>
+			<Details>
+				<Genre>Drama</Genre>
+				<Director>Robert Zemeckis</Director>
+				<Release date="1994-07-06" />
+			</Details>
+			<Description>
+The story of a man with a kind heart and an incredible life journey.
+			</Description>
+			<Media>
+				<ImageUrl>https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg</ImageUrl>
+			</Media>
+			<Rating source="IMDb">8.8</Rating>
+		</Movie>
+	</GenreGroup>
+
+	<GenreGroup name="Action">
+		<Movie id="bf9ff8b3-3209-4b18-9f4b-5172c45b73f9" duration="155">
+			<Title>Gladiator</Title>
+			<Details>
+				<Genre>Action</Genre>
+				<Director>Ridley Scott</Director>
+				<Release date="2000-05-05" />
+			</Details>
+			<Description>
+A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family and sent him into slavery.
+			</Description>
+			<Media>
+				<ImageUrl>https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png</ImageUrl>
+			</Media>
+			<Rating source="IMDb">8.5</Rating>
+		</Movie>
+	</GenreGroup>
+
+	<GenreGroup name="Drama">
+		<Movie id="e00208b1-cb12-4bd4-8ac1-36ab62f7b4c9" duration="142">
+			<Title>The Shawshank Redemption</Title>
+			<Details>
+				<Genre>Drama</Genre>
+				<Director>Frank Darabont</Director>
+				<Release date="1994-09-23" />
+			</Details>
+			<Description>
+Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.
+			</Description>
+			<Media>
+				<ImageUrl>https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg</ImageUrl>
+			</Media>
+			<Rating source="IMDb">9.3</Rating>
+		</Movie>
+	</GenreGroup>
+
+	<GenreGroup name="Crime">
+		<Movie id="4491b6f5-2a11-4c4c-8c6b-c371f47d2152" duration="154">
+			<Title>Pulp Fiction</Title>
+			<Details>
+				<Genre>Crime</Genre>
+				<Director>Quentin Tarantino</Director>
+				<Release date="1994-10-14" />
+			</Details>
+			<Description>
+The lives of two hitmen, a boxer, and a gangster intertwine in four tales of violence and redemption.
+			</Description>
+			<Media>
+				<ImageUrl>https://www.tallengestore.com/cdn/shop/products/PulpFiction-JohnTravoltaAndSamuelLJackson-MovieStill1_d3db6d19-235a-45aa-97b2-ab690665c224.jpg?v=1684129898</ImageUrl>
+			</Media>
+			<Rating source="IMDb">8.9</Rating>
+		</Movie>
+	</GenreGroup>
+</MoviesLibrary>

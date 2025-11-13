@@ -1,0 +1,66 @@
+﻿@model MovieDetailsViewModel
+
+@{
+    ViewData["Title"] = "Watchlist Movie Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card bg-dark text-light shadow-lg border-0">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center p-3">
+                        <img src="@Model.ImageUrl"
+                             alt="@Model.Title"
+                             class="img-fluid rounded"
+                             style="max-height: 350px; object-fit: cover;" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title text-warning fw-bold">@Model.Title</h2>
+
+                            <p class="mb-1">
+                                <strong>Genre:</strong> @Model.Genre
+                            </p>
+                            <p class="mb-1">
+                                <strong>Director:</strong> @Model.Director
+                            </p>
+                            <p class="mb-1">
+                                <strong>Duration:</strong> @Model.Duration min
+                            </p>
+                            <p class="mb-3">
+                                <strong>Release Date:</strong> @Model.ReleaseDate.ToShortDateString()
+                            </p>
+
+                            <hr />
+
+                            <p class="card-text">
+                                @Model.Description
+                            </p>
+
+                            <div class="mt-4 d-flex gap-3">
+                                <a asp-controller="Watchlist"
+                                   asp-action="Index"
+                                   class="btn btn-outline-light">
+                                    <i class="bi bi-arrow-left"></i> Back to Watchlist
+                                </a>
+
+                                <form asp-controller="Watchlist"
+                                      asp-action="Remove"
+                                      method="post"
+                                      class="d-inline">
+                                    <input type="hidden" name="id" value="@Model.Id" />
+                                    <button type="submit"
+                                            class="btn btn-danger">
+                                        <i class="bi bi-x-circle"></i> Remove from Watchlist
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

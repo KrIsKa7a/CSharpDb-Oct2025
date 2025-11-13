@@ -1,0 +1,60 @@
+﻿@model MoviesApp.ViewModels.Import.ImportIndexViewModel
+
+@{
+    ViewData["Title"] = "Import Movies";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-warning fw-bold mb-3">Import Movies</h2>
+    <p class="text-center text-light mb-4">
+        Choose how you want to import movies into the application.
+    </p>
+
+    <div class="d-flex justify-content-center gap-4 mb-4">
+        <!-- JSON Import -->
+        <form asp-controller="Import"
+              asp-action="ImportJson"
+              method="post">
+            <button type="submit"
+                    class="btn btn-primary btn-lg px-4 shadow-sm">
+                <i class="bi bi-file-earmark-code"></i> JSON Import
+            </button>
+        </form>
+
+        <!-- XML Import -->
+        <form asp-controller="Import"
+              asp-action="ImportXml"
+              method="post">
+            <button type="submit"
+                    class="btn btn-info btn-lg px-4 shadow-sm">
+                <i class="bi bi-file-earmark-text"></i> XML Import
+            </button>
+        </form>
+    </div>
+
+    @if (Model.JsonImportedCount.HasValue || Model.XmlImportedCount.HasValue)
+    {
+        <div class="alert alert-success text-center mt-4">
+            @if (Model.JsonImportedCount.HasValue)
+            {
+                <p class="mb-1">
+                    <strong>@Model.JsonImportedCount</strong> movie(s) imported from
+                    <strong>JSON</strong>.
+                </p>
+            }
+            @if (Model.XmlImportedCount.HasValue)
+            {
+                <p class="mb-0">
+                    <strong>@Model.XmlImportedCount</strong> movie(s) imported from
+                    <strong>XML</strong>.
+                </p>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-center text-muted mt-4">
+            No movies imported yet. Use one of the buttons above to start an import.
+        </p>
+    }
+</div>
