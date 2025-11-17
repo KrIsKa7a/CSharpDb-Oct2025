@@ -15,7 +15,7 @@
         [MaxLength(MovieDirectorMaxLength)]
         public string Director { get; set; } = null!;
 
-        [Range(MovieDurationMinLength, MovieDurationMaxLength)]
+        [Range(MovieDurationMinValue, MovieDurationMaxValue)]
         public int Duration { get; set; }
 
         public DateTime ReleaseDate { get; set; }
