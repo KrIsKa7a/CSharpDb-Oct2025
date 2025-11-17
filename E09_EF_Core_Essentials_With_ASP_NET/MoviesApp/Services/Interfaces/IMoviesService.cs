@@ -1,16 +1,19 @@
 ﻿namespace MoviesApp.Services.Interfaces
 {
     using Models;
+    using ViewModels.Movies;
 
     public interface IMoviesService
     {
-        Task<IEnumerable<Movie>> GetAllAsync();
+        Task<IEnumerable<AllMoviesIndexViewModel>> GetAllMoviesForListingAsync();
 
-        Task<Movie?> GetByIdAsync(int id);
+        Task<MovieDetailsViewModel?> GetMovieDetailsByIdAsync(int id);
 
-        Task AddAsync(Movie movie);
+        Task<AllMoviesIndexViewModel?> GetMoviePrepareDeleteViewModelByIdAsync(int id);
 
-        Task DeleteAsync(int id);
+        Task CreateAsync(AddMovieFormModel inputModel);
+
+        Task<bool> DeleteAsync(int id);
 
         Task<bool> ExistsAsync(int id);
     }

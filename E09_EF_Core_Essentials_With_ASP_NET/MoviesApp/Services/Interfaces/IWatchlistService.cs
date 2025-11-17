@@ -1,12 +1,13 @@
 ﻿namespace MoviesApp.Services.Interfaces
 {
     using Models;
+    using ViewModels.Movies;
 
     public interface IWatchlistService
     {
-        Task<IEnumerable<Movie>> GetAllAsync();
+        Task<IEnumerable<AllMoviesIndexViewModel>> GetAllMoviesInWatchlistAsync();
 
-        Task AddAsync(int movieId);
+        Task<bool> AddMovieToWatchlistAsync(int movieId);
 
         Task RemoveAsync(int movieId);
 

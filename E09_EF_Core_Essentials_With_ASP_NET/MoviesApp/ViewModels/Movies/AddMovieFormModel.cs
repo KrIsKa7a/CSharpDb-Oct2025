@@ -6,12 +6,18 @@
 
     public class AddMovieFormModel
     {
+        [Required]
+        [MinLength(MovieTitleMinLength)]
         [MaxLength(MovieTitleMaxLength)]
         public string Title { get; set; } = null!;
 
+        [Required]
+        [MinLength(MovieGenreMinLength)]
         [MaxLength(MovieGenreMaxLength)]
         public string Genre { get; set; } = null!;
 
+        [Required]
+        [MinLength(MovieDirectorMinLength)]
         [MaxLength(MovieDirectorMaxLength)]
         public string Director { get; set; } = null!;
 
@@ -20,6 +26,8 @@
 
         public DateTime ReleaseDate { get; set; }
 
+        [Required]
+        [MinLength(MovieDescriptionMinLength)]
         [MaxLength(MovieDescriptionMaxLength)]
         public string Description { get; set; } = null!;
 

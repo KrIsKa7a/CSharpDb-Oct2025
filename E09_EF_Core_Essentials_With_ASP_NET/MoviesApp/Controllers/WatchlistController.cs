@@ -1,11 +1,9 @@
 ﻿namespace MoviesApp.Controllers
 {
-    using System.Globalization;
-    using Microsoft.AspNetCore.Mvc;
-
-    using Models;
     using Services.Interfaces;
     using ViewModels.Movies;
+
+    using Microsoft.AspNetCore.Mvc;
 
     public class WatchlistController : Controller
     {
@@ -22,20 +20,8 @@
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            IEnumerable<Movie> movies = await this.watchlistService
-                .GetAllAsync();
-            IEnumerable<AllMoviesIndexViewModel> movieViewModels = movies
-                .Select(m => new AllMoviesIndexViewModel
-                {
-                    Id = m.Id,
-                    Title = m.Title,
-                    Genre = m.Genre,
-                    ReleaseDate = m.ReleaseDate.ToString(CultureInfo.CurrentCulture),
-                    Director = m.Director,
-                    Duration = m.Duration,
-                    Description = m.Description,
-                    ImageUrl = m.ImageUrl,
-                });
+            IEnumerable<AllMoviesIndexViewModel> movieViewModels = await this.watchlistService
+                .GetAllMoviesInWatchlistAsync();
 
             return View(movieViewModels);
         }
@@ -49,12 +35,10 @@
                 return NotFound();
             }
 
-            bool movieInWatchlistExists = await this.watchlistService
-                .MovieExistsInWatchlistAsync(id);
-            if (!movieInWatchlistExists)
+            bool movieAddedToWatchlist = await this.watchlistService
+                .AddMovieToWatchlistAsync(id);
+            if (movieAddedToWatchlist)
             {
-                await this.watchlistService.AddAsync(id);
-
                 return RedirectToAction("Index", "Watchlist");
             }
 
