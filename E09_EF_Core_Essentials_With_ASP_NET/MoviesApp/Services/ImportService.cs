@@ -13,7 +13,6 @@
     public class ImportService : IImportService
     {
         private readonly MoviesAppDbContext dbContext;
-        private static bool isImported = false;
 
         public ImportService(MoviesAppDbContext dbContext)
         {
@@ -22,11 +21,6 @@
 
         public async Task<int> ImportFromJsonAsync(string fileName)
         {
-            if (isImported)
-            {
-                return 0;
-            }
-
             string jsonFileContent = this.ReadDatasetFileContents(fileName);
 
             ICollection<Movie> moviesToImport = new List<Movie>();
@@ -49,6 +43,13 @@
                         continue;
                     }
 
+                    if (this.dbContext.Movies.Any(m => m.Title == movieDto.Title))
+                    {
+                        /* Based on assumption that the Movie Title is unique */
+                        /* This will prevent double import even if the application is restarted */
+                        continue;
+                    }
+
                     Movie newMovie = new Movie()
                     {
                         Title = movieDto.Title,
@@ -65,8 +66,6 @@
                 await this.dbContext.Movies.AddRangeAsync(moviesToImport);
                 await this.dbContext.SaveChangesAsync();
             }
-
-            isImported = true;
 
             return moviesToImport.Count;
         }
