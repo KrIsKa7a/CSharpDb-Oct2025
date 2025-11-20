@@ -13,3 +13,4 @@
 7. [**JSON Processing**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E07_JSON_Processing)
 8. [**XML Processing**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E08_XML_Processing)
 9. [**EF Core Essentials with ASP.NET**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E09_EF_Core_Essentials_With_ASP_NET)
+10. [**Exam Preparation**](https://github.com/KrIsKa7a/CSharpDb-Oct2025/tree/main/E10_Exam_Preparation)
